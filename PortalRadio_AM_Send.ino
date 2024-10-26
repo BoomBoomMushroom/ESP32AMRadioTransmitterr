@@ -16,7 +16,7 @@ const float audio_samples[] PROGMEM = {
 }; 
 
 // Set sample rate to match your WAV file (e.g., 8 kHz, 44.1 kHz, etc.)
-#define SAMPLE_RATE 48000 * 3 // Increase this for better audio quality
+#define SAMPLE_RATE 8000 // Increase this for better audio quality
 
 // PWM setup
 void setup_pwm(uint slice_num, uint16_t top_val) {
@@ -38,9 +38,9 @@ void setup() {
 
     setup_pwm(slice_num, top_val);
 
-    Serial.begin(9600);
-    Serial.printf("Carrier Frequency: %d Hz\n", CARRIER_FREQ);
-    Serial.printf("Sample Rate: %d Hz\n", SAMPLE_RATE);
+    //Serial.begin(9600);
+    //Serial.printf("Carrier Frequency: %d Hz\n", CARRIER_FREQ);
+    //Serial.printf("Sample Rate: %d Hz\n", SAMPLE_RATE);
 }
 
 static int sample_index = 0;
@@ -48,7 +48,7 @@ static int sample_index = 0;
 void loop() {
     float mod_signal = audio_samples[sample_index];
 
-    Serial.printf("Sample Index: %d, Value: %f\n", sample_index, mod_signal);
+    //Serial.printf("Sample Index: %d, Value: %f\n", sample_index, mod_signal);
 
     uint slice_num = pwm_gpio_to_slice_num(CARRIER_PIN);
     set_pwm_duty(slice_num, mod_signal);
@@ -60,4 +60,5 @@ void loop() {
 
     // Wait for the next sample (based on sample rate)
     delayMicroseconds(1000000 / SAMPLE_RATE);
+    //delayMicroseconds(1);
 }
