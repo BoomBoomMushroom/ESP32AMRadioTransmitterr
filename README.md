@@ -12,7 +12,7 @@ Thank you to [Bitluni](https://www.youtube.com/watch?v=lRXHd3HNzEo) for this pro
 
 # License
 
-Same as Bitluni's
+Same as Bitluni's license
 ```
 CC0. Do whatever you like with the code but I will be thankfull 
 if you attribute me. Keep the spirit alive :-)
