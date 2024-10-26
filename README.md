@@ -1,23 +1,21 @@
-# ESP32 AM Radio Transmitter
+# Raspberry Pi Pico WH - AM Radio Transmitter
 
-This is a simple project showing how to generate an AM radio transmission on 835kHz.
+This is project shows how to generate an AM radio transmission on any carrier frequency; 530kHz in the Portal Radio Example.
 
-Audio2Header converts audio files to a c++ header
+ConvertWavToArr.py | Converts Unsigned 8-bit PCM wav files into an array of audio data for the Pi
 
-AMTransmitterI2S plays an audio loop.
-AMTransmitterI2SButton plays the audio sample on a button press.
+PortalRadio_AM_Send.ino | Sends Portal Radio Music through Pin 15 Constantly on loop
 
-You need an ESP32 module and a wire as antenna connected to pin 25
+You need a Raspberry Pi Pico (Any other microcontroller might work too) and a wire as antenna connected to pin 15
 
-Watch the project video on YouTube:
-https://youtu.be/lRXHd3HNzEo
-
-and check the project page for updates:
-http://bitluni.net/am-radio-transmitter/
+Thank you to [Bitluni](https://www.youtube.com/watch?v=lRXHd3HNzEo) for this project idea, and the code structure!
 
 # License
 
+Same as Bitluni's
+```
 CC0. Do whatever you like with the code but I will be thankfull 
 if you attribute me. Keep the spirit alive :-)
 
 - bitluni
+```
