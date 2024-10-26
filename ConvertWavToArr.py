@@ -1,6 +1,7 @@
-# Make sure wav is Mono & Exported with Unsigned 8 bit PCM 
+# Make sure wav is Mono, Exported with Unsigned 8 bit PCM & A low sample rate to save space!
 # Mono = Tracks -> Mix -> Mix Stero Down to Mono
 # Export -> Export as Wav -> Save as type "Wav (Microsoft)" & Encoding: "Unsigned 8-bit PCM
+# 8k Sample rate -> Bottom-Left set to 8000
 
 import wave
 
